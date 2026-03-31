@@ -1,0 +1,6 @@
+mixin filter-status(filterStatus)
+    each item in filterStatus
+        a(
+            href=item.status ? `?status=${item.status}` : `/admin/products`
+            class=`btn btn-sm ml-1 ${item.class ? 'btn-success' : 'btn-outline-success'}`
+        ) #{item.name}
